@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>点击一个按钮 变化开关灯 开灯时白色 关灯时黑色</title>
+</head>
+
+<body>
+  <div class="box">
+    <input type="button" value="关灯" id="btn">
+  </div>
+</body>
+<script>
+  var btn = document.getElementById("btn")
+  btn.onclick = function () {
+    if (btn.value == "关灯") {
+      btn.value = "开灯"
+      document.body.style.backgroundColor = "#000"
+
+    } else {
+      btn.value = "关灯"
+      document.body.style.backgroundColor = "#fff"
+    }
+  }
+</script>
+
+</html>
