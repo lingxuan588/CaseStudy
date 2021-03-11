@@ -6,22 +6,54 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>常见输入框光标显示列表 失去焦点隐藏列表</title>
+  <style>
+    .list {
+      display: none;
+    }
+
+    .show {
+      display: block;
+    }
+  </style>
 </head>
 
+
 <body>
+
   <div class="box">
     <input type="text" id="search">
-    <img src="../images/mi.png" alt="" srcset="" id="list">
+    <div class="list" id="list">
+      <img src="../images/mi.png" alt="" srcset="">
+    </div>
+
   </div>
 </body>
 <script>
+  //  1. 用style直接控制样式  进行显示或隐藏
+  // var search = document.getElementById("search")
+  // var list =document.getElementById("list")
+  // search.onfocus = function () {
+  //   list.style.display = "block"
+  // }
+  // search.onblur=function(){
+  //   list.style.display="none"
+  // }
+
+
+
+  // 2.用classList的几个属性  添加class
+
   var search = document.getElementById("search")
-  var list =document.getElementById("list")
+  var list = document.getElementById("list")
   search.onfocus = function () {
-    list.style.display = "block"
+    console.log("1")
+    list.classList.add("show")
+    // list.classList.toggle("show");
   }
-  search.onblur=function(){
-    list.style.display="none"
+  search.onblur = function () {
+    console.log("2")
+    list.classList.remove("show")
+    // list.classList.toggle("show");
   }
 </script>
 
