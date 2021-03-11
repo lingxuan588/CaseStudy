@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>常见输入框光标显示列表 失去焦点隐藏列表</title>
+</head>
+
+<body>
+  <div class="box">
+    <input type="text" id="search">
+    <img src="../images/mi.png" alt="" srcset="" id="list">
+  </div>
+</body>
+<script>
+  var search = document.getElementById("search")
+  var list =document.getElementById("list")
+  search.onfocus = function () {
+    list.style.display = "block"
+  }
+  search.onblur=function(){
+    list.style.display="none"
+  }
+</script>
+
+</html>
